@@ -261,7 +261,7 @@
 <footer></footer>
 
 <!-- سكريبت ييجي هنا -->
-<script>
+      <script>
   document.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector("form");
     const messageBox = document.getElementById("form-message");
@@ -281,20 +281,24 @@
       }
     });
 
-    // زر اقرأ المزيد
-    const buttons = document.querySelectorAll(".btn");
-    buttons.forEach((btn, i) => {
+    // زر اقرأ المزيد لكل الأزرار اللي جوا كروت
+    const allBtns = document.querySelectorAll(".btn");
+    allBtns.forEach((btn) => {
       btn.addEventListener("click", () => {
         const card = btn.closest(".card");
+        if (!card) return;
+
         const dots = card.querySelector(".dots");
         const moreText = card.querySelector(".more-text");
-        const isOpen = moreText.style.display === "inline";
 
-        moreText.style.display = isOpen ? "none" : "inline";
-        dots.style.display = isOpen ? "inline" : "none";
-        btn.textContent = isArabic
-          ? isOpen ? "اقرأ المزيد" : "اقرأ أقل"
-          : isOpen ? "Read More" : "Read Less";
+        if (dots && moreText) {
+          const isOpen = moreText.style.display === "inline";
+          moreText.style.display = isOpen ? "none" : "inline";
+          dots.style.display = isOpen ? "inline" : "none";
+          btn.textContent = isArabic
+            ? isOpen ? "اقرأ المزيد" : "اقرأ أقل"
+            : isOpen ? "Read More" : "Read Less";
+        }
       });
     });
 
@@ -321,9 +325,11 @@
       document.querySelector(".home-content h3").innerHTML = isArabic
         ? 'أنا <span>مصمم محترف ومطور</span>'
         : "I'm a <span>Professional Designer & Developer</span>";
-      document.querySelector(".home-content p").textContent = isArabic
-        ? "افتح تجربة PvP النهائية مع حزمة الموارد الخاصة بي لماينكرافت جافا إيديشن. مصممة للاعبين التنافسيين، تحتوي على رسومات أنيقة، وخامات محسّنة، وواجهة نظيفة لتعزيز التركيز وتحسين الأداء في كل معركة."
-        : "Unlock the ultimate PvP experience with my custom resource pack for Minecraft Java Edition. Designed for competitive players, it features sleek visuals, optimized textures, and a clean interface to sharpen your focus and boost performance in every battle.";
+     document.querySelector(".home-content p").textContent = isArabic  
+        ? "افتح تجربة PvP النهائية مع حزمة الموارد الخاصة بي لماينكرافت جافا إيديشن. مصممة للاعبين التنافسيين، تحتوي على رسومات أنيقة، وخامات محسّنة، وواجهة نظيفة لتعزيز التركيز وتحسين الأداء في كل معركة."  
+        : "Unlock the ultimate PvP experience with my custom resource pack for Minecraft Java Edition. Designed for competitive players, it features sleek visuals, optimized textures, and a clean interface to sharpen your focus and boost performance in every battle.";  
+      document.querySelector(".btn").textContent = isArabic ? "تحميل الآن" : "DONLOWD NOW";  
+
       document.querySelector(".btn").textContent = isArabic ? "تحميل الآن" : "DONLOWD NOW";
 
       // الخدمات
@@ -343,9 +349,9 @@
           ];
       const moreTexts = isArabic
         ? [
-            "باكات موارد مخصصة لماينكرافت جافا 1.12.2، تمزج بين الأداء العالي والتصميم الجميل، ومصممة للاعبين والمبدعين.",
-            "باك سكارلوجو ليس مجرد موارد — بل ترقية PvP قوية مصممة للتفوق على سيرفرات ماينكرافت 1.12.2.",
-            "سكارلوجو صممت لدعم كل شيء بسلاسة حتى تركز على الفوز."
+            "باكات موارد لماينكرافت جافا، أداء عالي وتصميم جميل.",
+            "سكارلوجو ليس مجرد باك — بل ترقية PvP قوية.",
+            "دعم كامل لحزمة Skarlogo PvP لتضمن تجربة سلسة."
           ]
         : [
             "Java 1.12.2 resource packs, Skarlogo blends performance with stunning visuals.",
@@ -356,7 +362,8 @@
         card.querySelector("h2").textContent = titles[i];
         card.querySelector("p").childNodes[0].textContent = descs[i];
         card.querySelector(".more-text").textContent = moreTexts[i];
-        card.querySelector(".read-more-btn").textContent = isArabic ? "اقرأ المزيد" : "Read More";
+        const btn = card.querySelector("a.btn");
+        if (btn) btn.textContent = isArabic ? "اقرأ المزيد" : "Read More";
       });
 
       // المهارات
@@ -400,30 +407,28 @@
       document.querySelector("footer .footerbotom p").innerHTML = isArabic
         ? "© 2025 حقوق النشر محفوظة لـ <span class='dis'>سيف محمد</span>"
         : "coppyright© 2025 Designed by <span class='dis'>SeifMohamed</span>";
-        // ترجمة المشاريع
-const projectCards = document.querySelectorAll(".project-card");
 
-const projectTitles = isArabic
-  ? ["1. حزمة سكارلوجو", "2. موقعي الشخصي", "3. مودات مخصصة"]
-  : ["1. Skarlogo Pack", "2. Personal Website", "3. Custom Mods"];
-
-const projectDescs = isArabic
-  ? [
-  "باك PvP قوي لماينكرافت 1.12.2، تصميم نظيف، FPS عالي، وواجهة واضحة للقتال.",
-  "موقع شخصي ديناميكي بلغة HTML/CSS مع ستايل أسود جذاب وأزرار تفاعلية.",
-  "موداتي الخاصة لماينكرافت جافا فقط، حمّلها مجانًا من Mediafire."
-]
-  : [
-      "A powerful PvP pack for Minecraft 1.12.2 with a clean design, high FPS, and a clear combat interface.",
-      "A dynamic personal website built with HTML/CSS, featuring a sleek dark style and interactive buttons.",
-      "My custom mods for Minecraft Java, available for free download via Mediafire."
-    ];
-
-projectCards.forEach((card, i) => {
-  card.querySelector("h3").textContent = projectTitles[i];
-  card.querySelector("p").textContent = projectDescs[i];
-  card.querySelector(".btn").textContent = isArabic ? "عرض المشروع" : "project showcase";
-});
+      // المشاريع
+      const projectCards = document.querySelectorAll(".project-card");
+      const projectTitles = isArabic
+        ? ["1. حزمة سكارلوجو", "2. موقعي الشخصي", "3. مودات مخصصة"]
+        : ["1. Skarlogo Pack", "2. Personal Website", "3. Custom Mods"];
+      const projectDescs = isArabic
+        ? [
+            "باك PvP قوي لماينكرافت، تصميم نظيف وواجهة قتالية.",
+            "موقع شخصي ديناميكي بـ HTML/CSS وستايل أسود جذاب.",
+            "موداتي الخاصة لماينكرافت جافا فقط، حمّلها مجانًا من Mediafire."
+          ]
+        : [
+            "A powerful PvP pack for Minecraft 1.12.2 with a clean design.",
+            "A dynamic personal website built with HTML/CSS and sleek dark style.",
+            "My custom mods for Minecraft Java, available free via Mediafire."
+          ];
+      projectCards.forEach((card, i) => {
+        card.querySelector("h3").textContent = projectTitles[i];
+        card.querySelector("p").textContent = projectDescs[i];
+        card.querySelector(".btn").textContent = isArabic ? "عرض المشروع" : "project showcase";
+      });
     });
   });
 </script>
