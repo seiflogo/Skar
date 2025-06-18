@@ -7,13 +7,14 @@
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="stylesheet" href="style.css" />
   <title>SKARLOGO</title>
+
   <style>
     .music-btn {
       position: absolute;
       top: 50%;
       right: 10px;
       transform: translateY(-50%);
-      background: #0f0;
+      background: #b7325f;
       border: none;
       color: #000;
       border-radius: 50%;
@@ -21,14 +22,19 @@
       height: 40px;
       font-size: 18px;
       cursor: pointer;
-      box-shadow: 0 0 10px #0f0;
+      box-shadow: 0 0 10px #b7325f;
       transition: background 0.3s, box-shadow 0.3s;
       z-index: 1000;
     }
     .music-btn:hover {
-      background: #0c0;
-      box-shadow: 0 0 15px #0f0;
+      background: #b7325f;
+      box-shadow: 0 0 15px #b7325f;
     }
+    
+#langToggle::before {
+  content: "🌐";
+  font-size: 18px;
+}
   </style>
 </head>
 <body>
@@ -47,12 +53,12 @@
 
   <section class="home">
     <div class="home-img">
-      <img src="Ss.jpg" alt=""/>
+      <img src="Ss.jpg" alt="" />
     </div>
     <div class="home-content">
       <h1>Hi, It's <span>Skar</span></h1>
       <h3 class="typing-text">I'm a <span></span></h3>
-      <p>Unlock the ultimate PvP experience with my custom resource pack for Minecraft Java Edition. Designed for competitive players, it features sleek visuals, optimized textures, and a clean interface to sharpen your focus and boost performance in every battle.</p>
+<p>Unlock the ultimate PvP experience with my custom resource pack for Minecraft Java Edition. Designed for competitive players, it features sleek visuals, optimized textures, and a clean interface to sharpen your focus and boost performance in every battle.</p>
       <div class="social-icons">
         <a href="#"><i class="fa-brands fa-linkedin"></i></a>
         <a href="#"><i class="fa-brands fa-github"></i></a>
@@ -60,6 +66,8 @@
         <a href="#"><i class="fa-brands fa-instagram"></i></a>
       </div>
       <a href="https://www.mediafire.com/file/m1jp0kc9mzx10b2/Skarlogo1.12.2_Resource_Pack.zip/file" class="btn">DONLOWD NOW</a>
+<a href="#" id="langToggle" class="btn"> <span class="lang-text">English</span>
+</a>
     </div>
   </section>
 
@@ -79,7 +87,7 @@
     <span class="dots">...</span>    
     <span class="more-text" style="display: none;"> Java 1.12.2 resource packs, I design with precision. My signature PvP pack, Skarlogo, blends performance with stunning visuals—built for serious players and creators.</span>    
   </p>    
-  <a class="button read-more-btn">Read More</a>    
+  <a class="btn">Read More</a>    
 </div>  <div class="card">    
   <div class="icon">    
     <i class="fas fa-wrench"></i>    
@@ -90,7 +98,7 @@
     <span class="dots">...</span>    
     <span class="more-text" style="display: none;">, modern, and visually striking experiences. Skarlogo isn't just a resource pack—it’s a bold PvP upgrade crafted to dominate Minecraft 1.12.2 servers.</span>    
   </p>    
-  <a class="button read-more-btn">Read More</a>    
+  <a class="btn">Read More</a>    
 </div>  <div class="card">    
   <div class="icon">    
     <i class="fas fa-handshake"></i>    
@@ -101,7 +109,7 @@
     <span class="dots">...</span>    
     <span class="more-text" style="display: none;"> for all projects—especially my Skarlogo PvP pack. Designed for Minecraft Java 1.12.2, I ensure everything works smoothly so you can focus on winning.</span>    
   </p>    
-  <a class="button read-more-btn">Read More</a>    
+  <a class="btn">Read More</a>    
 </div>    
       </div>    
     </div>    
@@ -158,6 +166,36 @@
         </div>    
       </div>    
     </div>    
+    
+      <div class="projects" id="projects">
+  <h2 class="heading">My <span>Projects</span></h2>
+  <div class="project-container">
+    <div class="project-card">
+      <img src="mod.jpeg" alt="Project 1">
+      <h3>1. Skarlogo Pack</h3>
+<p>A powerful PvP pack for Minecraft 1.12.2 with a clean design, high FPS, and a clear combat interface.</p>
+      <a href="https://www.mediafire.com/file/m1jp0kc9mzx10b2/Skarlogo1.12.2_Resource_Pack.zip/file" class="btn">project showcase</a>
+    </div>
+
+    <div class="project-card">
+      <img src="mod1.jpeg" alt="Project 2">
+      <h3>2. Personal Website</h3>
+<p>A dynamic personal website built with HTML/CSS, featuring a sleek dark style and interactive buttons.</p>
+      <a href="#" class="btn">project showcase</a>
+    </div>
+
+    <div class="project-card">
+      <img src="mod2.jpeg" alt="Project 3">
+      <h3>3. Custom Mods</h3>
+      <p>My mod in Minecraft java only donlowd in mediafire for free</p>
+      <a href="https://www.mediafire.com/file/e5ku84zldhntzb7/Skar-mods.zip/file" class="btn">project showcase</a>
+    </div>
+  </div>
+  
+
+    
+    
+    
   </div>  <div class="con" id="con">    
 <h2 class="heading" id="contact">Contact <span>Me</span></h2>     
   <form action="https://formspree.io/f/mrbklqgy" method="POST">    
@@ -175,8 +213,13 @@
     <input type="submit" value="Send Message" class="btn">    
 </label>    
   </form>    
+  
+  
+  <hr class="section-divider">
+
+  
 <div class="cards contact1" id="work">    
-    <h2>Let's work together</h2>    
+    <h2 class="spa">Let's work together</h2>    
     <div class="content1">    
         <div class="card1">    
             <div class="icon">    
@@ -185,7 +228,7 @@
             <div class="info1">    
                 <h3>Phone</h3>    
                 <p>    
-                    <a href="tel:+201063085417" style="color: #0f0; text-decoration: none;">    
+                    <a href="tel:+201063085417" style="color: #b7325f; text-decoration: none;">    
                         +201063085417    
                     </a>    
                 </p>    
@@ -198,7 +241,7 @@
             <div class="info1">    
                 <h3>Email</h3>    
                 <p>    
-                    <a href="mailto:skarlogo2000@gmail.com" style="color: #0f0; text-decoration: none;">    
+                    <a href="mailto:skarlogo2000@gmail.com" style="color: #b7325f; text-decoration: none;">    
                         skarlogo2000@gmail.com    
                     </a>    
                 </p>    
@@ -214,60 +257,22 @@
     </footer>
 
 
-  <script>
+<!-- نهاية الصفحة -->
+<footer></footer>
+
+<!-- سكريبت ييجي هنا -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector("form");
     const messageBox = document.getElementById("form-message");
-
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault();
-      const formData = new FormData(form);
-      const response = await fetch(form.action, {
-        method: form.method,
-        body: formData,
-        headers: {
-          Accept: "application/json",
-        },
-      });
-
-      if (response.ok) {
-        form.reset();
-        messageBox.style.display = "block";
-        messageBox.textContent = "✅ Message sent successfully!";
-        messageBox.classList.remove("custom-success-message");
-        void messageBox.offsetWidth;
-        messageBox.classList.add("custom-success-message");
-      } else {
-        messageBox.style.display = "block";
-        messageBox.textContent = "❌ Error sending message.";
-        messageBox.style.backgroundColor = "#f00";
-        messageBox.style.boxShadow = "0 0 15px #f00, 0 0 25px #f00, 0 0 35px #f00";
-      }
-    });
-
-    const buttons = document.querySelectorAll(".read-more-btn");
-    buttons.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const card = btn.closest(".card");
-        const dots = card.querySelector(".dots");
-        const moreText = card.querySelector(".more-text");
-        if (moreText.style.display === "inline") {
-          moreText.style.display = "none";
-          dots.style.display = "inline";
-          btn.textContent = "Read More";
-        } else {
-          moreText.style.display = "inline";
-          dots.style.display = "none";
-          btn.textContent = "Read Less";
-        }
-      });
-    });
+    const langBtn = document.getElementById("langToggle");
+    const playBtn = document.getElementById("playBtn");
+    const audio = document.getElementById("adorAudio");
+    let isArabic = false;
 
     // تشغيل الموسيقى
-    const audio = document.getElementById("adorAudio");
-    const playBtn = document.getElementById("playBtn");
     playBtn.addEventListener("click", () => {
       if (audio.paused) {
-        audio.volume = 1.0;
         audio.play();
         playBtn.textContent = "⏸️";
       } else {
@@ -275,6 +280,154 @@
         playBtn.textContent = "🎵";
       }
     });
-  </script>
+
+    // زر اقرأ المزيد
+    const buttons = document.querySelectorAll(".btn");
+    buttons.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        const card = btn.closest(".card");
+        const dots = card.querySelector(".dots");
+        const moreText = card.querySelector(".more-text");
+        const isOpen = moreText.style.display === "inline";
+
+        moreText.style.display = isOpen ? "none" : "inline";
+        dots.style.display = isOpen ? "inline" : "none";
+        btn.textContent = isArabic
+          ? isOpen ? "اقرأ المزيد" : "اقرأ أقل"
+          : isOpen ? "Read More" : "Read Less";
+      });
+    });
+
+    // زر اللغة
+    langBtn.addEventListener("click", () => {
+      isArabic = !isArabic;
+      langBtn.textContent = isArabic ? " عربي" : " English";
+
+      // اللوجو والعنوان
+      document.querySelector(".logo").textContent = isArabic ? "سكارلوجو" : "SkarLogo";
+      document.title = isArabic ? "سكارلوجو" : "SKARLOGO";
+
+      // القوائم
+      const navLinks = document.querySelectorAll(".navbar a");
+      const navText = isArabic
+        ? ["الرئيسية", "الخدمات", "المهارات", "تواصل", "عملاء"]
+        : ["Home", "Services", "Skills", "Contact", "worker"];
+      navLinks.forEach((link, i) => (link.textContent = navText[i]));
+
+      // الهيرو
+      document.querySelector(".home-content h1").innerHTML = isArabic
+        ? "مرحبًا، أنا <span>سكار</span>"
+        : "Hi, It's <span>Skar</span>";
+      document.querySelector(".home-content h3").innerHTML = isArabic
+        ? 'أنا <span>مصمم محترف ومطور</span>'
+        : "I'm a <span>Professional Designer & Developer</span>";
+      document.querySelector(".home-content p").textContent = isArabic
+        ? "افتح تجربة PvP النهائية مع حزمة الموارد الخاصة بي لماينكرافت جافا إيديشن. مصممة للاعبين التنافسيين، تحتوي على رسومات أنيقة، وخامات محسّنة، وواجهة نظيفة لتعزيز التركيز وتحسين الأداء في كل معركة."
+        : "Unlock the ultimate PvP experience with my custom resource pack for Minecraft Java Edition. Designed for competitive players, it features sleek visuals, optimized textures, and a clean interface to sharpen your focus and boost performance in every battle.";
+      document.querySelector(".btn").textContent = isArabic ? "تحميل الآن" : "DONLOWD NOW";
+
+      // الخدمات
+      document.querySelector(".sec .title h1").textContent = isArabic ? "خدماتنا" : "Our Services";
+      const cards = document.querySelectorAll(".card");
+      const titles = isArabic ? ["تخطيط", "تجديد", "دعم"] : ["Planning", "Renovation", "Support"];
+      const descs = isArabic
+        ? [
+            "حوّل رؤيتك إلى واقع مع خدمات التخطيط الاحترافية.",
+            "أعد الحياة لتصاميمك القديمة، وجدد مواقعك وباقاتك.",
+            "أنت لست وحدك، أدعمك خطوة بخطوة."
+          ]
+        : [
+            "Transform your vision into reality with expert planning services.",
+            "Give your old designs a new life with fresh visuals and speed.",
+            "You're never alone. Full support from install to polish."
+          ];
+      const moreTexts = isArabic
+        ? [
+            "باكات موارد مخصصة لماينكرافت جافا 1.12.2، تمزج بين الأداء العالي والتصميم الجميل، ومصممة للاعبين والمبدعين.",
+            "باك سكارلوجو ليس مجرد موارد — بل ترقية PvP قوية مصممة للتفوق على سيرفرات ماينكرافت 1.12.2.",
+            "سكارلوجو صممت لدعم كل شيء بسلاسة حتى تركز على الفوز."
+          ]
+        : [
+            "Java 1.12.2 resource packs, Skarlogo blends performance with stunning visuals.",
+            "Skarlogo isn’t just a resource pack—it’s a bold PvP upgrade.",
+            "Skarlogo PvP pack ensures everything works smoothly so you can focus on winning."
+          ];
+      cards.forEach((card, i) => {
+        card.querySelector("h2").textContent = titles[i];
+        card.querySelector("p").childNodes[0].textContent = descs[i];
+        card.querySelector(".more-text").textContent = moreTexts[i];
+        card.querySelector(".read-more-btn").textContent = isArabic ? "اقرأ المزيد" : "Read More";
+      });
+
+      // المهارات
+      document.querySelector(".skills .heading").textContent = isArabic ? "المهارات" : "Skills";
+      const skillNames = document.querySelectorAll(".skills .info span");
+      const skillTranslations = {
+        Figma: "فيجما",
+        photo: "فوتوشوب",
+        Html: "إتش تي إم إل",
+        Css: "سي إس إس",
+        Skech: "سكتش",
+        gamer: "لاعب",
+        hack: "هاكر",
+        Farmar: "فارمر"
+      };
+      skillNames.forEach((el) => {
+        const name = el.textContent.trim();
+        el.textContent = isArabic && skillTranslations[name] ? skillTranslations[name] : name;
+      });
+
+      // تواصل
+      document.querySelector("#contact").innerHTML = isArabic
+        ? "تواصل <span>معي</span>"
+        : "Contact <span>Me</span>";
+      document.querySelector(".cards.contact1 h2").textContent = isArabic
+        ? "دعنا نعمل معًا"
+        : "Let's work together";
+      document.querySelectorAll(".info1 h3")[0].textContent = isArabic ? "الهاتف" : "Phone";
+      document.querySelectorAll(".info1 h3")[1].textContent = isArabic ? "البريد الإلكتروني" : "Email";
+
+      // الفورم
+      const inputs = form.querySelectorAll("input");
+      inputs[0].placeholder = isArabic ? "الاسم" : "Name";
+      inputs[1].placeholder = isArabic ? "البريد الإلكتروني" : "Email";
+      inputs[2].placeholder = isArabic ? "رقم الهاتف" : "Phone Number";
+      inputs[3].placeholder = isArabic ? "الموضوع" : "Subject";
+      form.querySelector("textarea").placeholder = isArabic ? "رسالتك" : "Your Message";
+      form.querySelector("input[type='submit']").value = isArabic ? "إرسال" : "Send Message";
+
+      // الفوتر
+      document.querySelector("footer .footerbotom p").innerHTML = isArabic
+        ? "© 2025 حقوق النشر محفوظة لـ <span class='dis'>سيف محمد</span>"
+        : "coppyright© 2025 Designed by <span class='dis'>SeifMohamed</span>";
+        // ترجمة المشاريع
+const projectCards = document.querySelectorAll(".project-card");
+
+const projectTitles = isArabic
+  ? ["1. حزمة سكارلوجو", "2. موقعي الشخصي", "3. مودات مخصصة"]
+  : ["1. Skarlogo Pack", "2. Personal Website", "3. Custom Mods"];
+
+const projectDescs = isArabic
+  ? [
+  "باك PvP قوي لماينكرافت 1.12.2، تصميم نظيف، FPS عالي، وواجهة واضحة للقتال.",
+  "موقع شخصي ديناميكي بلغة HTML/CSS مع ستايل أسود جذاب وأزرار تفاعلية.",
+  "موداتي الخاصة لماينكرافت جافا فقط، حمّلها مجانًا من Mediafire."
+]
+  : [
+      "A powerful PvP pack for Minecraft 1.12.2 with a clean design, high FPS, and a clear combat interface.",
+      "A dynamic personal website built with HTML/CSS, featuring a sleek dark style and interactive buttons.",
+      "My custom mods for Minecraft Java, available for free download via Mediafire."
+    ];
+
+projectCards.forEach((card, i) => {
+  card.querySelector("h3").textContent = projectTitles[i];
+  card.querySelector("p").textContent = projectDescs[i];
+  card.querySelector(".btn").textContent = isArabic ? "عرض المشروع" : "project showcase";
+});
+    });
+  });
+</script>
+
+</body>
 </body>
 </html>
